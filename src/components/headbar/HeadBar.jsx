@@ -4,6 +4,7 @@ import "./headbar.css";
 const HeadBar = () => {
   return (
     <Grid
+      className="headbar"
       style={{
         background: "black",
         height: "6vh",
