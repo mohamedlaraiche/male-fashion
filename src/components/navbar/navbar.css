@@ -1,73 +1,105 @@
 .navbar {
   display: flex;
-  align-content: center;
-  justify-content: space-between;
-}
-
-.navbar img {
-  max-width: 100%;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
 }
 
 .navbar ul {
   display: flex;
+  width: 40%;
+  justify-content: space-between;
 }
-
-.navbar ul li {
-  margin: 0 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .navbar ul li a,
 .navbar ul li span {
-  color: #111111;
   font-weight: 600;
+  color: #111111;
   cursor: pointer;
 }
-
 .navbar ul li a:hover,
 .navbar ul li span:hover {
-  color: #e63334;
+  color: #e53637;
 }
-.navbar .icons svg {
-  margin: 0 10px;
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons svg {
+  margin: 0 5px;
   cursor: pointer;
 }
-.navbar .pagesDetails {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.burger {
+  cursor: pointer;
+  display: none;
 }
-.navbar .pagesDetails ul {
-  position: absolute;
-  top: 12vh;
-  right: 0%;
-  bottom: 55%;
-  left: 0%;
+.burger div {
+  width: 30px;
+  margin: 3px;
+  padding: 2.5px;
+  height: 3px;
   background-color: #111111;
-  width: auto;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 20px;
+  border-radius: 25px;
+}
+.pagesDetails {
+  position: absolute;
+  background-color: #111111;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+}
+.pagesDetails ul {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40px;
+  height: 100vh;
 }
-.navbar .pagesDetails ul li a {
+.pagesDetails ul li a {
   color: #fff;
-  margin: 5px 0px;
 }
-.navbar .pagesDetails ul li a:hover {
-  color: #e63334;
+#hidePages {
+  visibility: hidden;
+  transition: visibility 1s, opacity 1s linear;
+  opacity: 0;
 }
-#show {
-  transform: translateY(0%);
-  transition: 1s;
+#showPages {
+  transition: visibility 1s, opacity 1s linear;
+  opacity: 1;
+  visibility: visible;
 }
-#hide {
-  transform: translateY(-200%);
-  transition: 1s;
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+  .navbar .mainList {
+    position: absolute;
+    top: 16vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 84vh;
+    background-color: #111111ad;
+  }
+  .navbar .mainList li a,
+  .navbar .mainList span {
+    color: #fff;
+  }
+  #hideNav {
+    transform: translateY(-200%);
+    transition: 0.7s;
+  }
+  #showNav {
+    transform: translateY(0%);
+    transition: 0.7s;
+  }
 }

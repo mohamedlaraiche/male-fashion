@@ -1,74 +1,99 @@
-import { Grid } from "@mui/material";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import { useState } from "react";
 import "./navbar.css";
 
 const Navbar = () => {
   const [empty] = useState(false);
-  const [listState, setListState] = useState("hide");
-  const showList = () => setListState(listState === "hide" ? "show" : "hide");
+  const [listState, setListState] = useState("hidePages");
+  const [navbar, setNavbar] = useState("hideNav");
+  const showList = () =>
+    setListState(listState === "hidePages" ? "showPages" : "hidePages");
+  const closeSideBar = () => {
+    setListState("hidePages");
+    setNavbar("hideNav");
+  };
+  const navbarHandler = () =>
+    setNavbar(navbar === "hideNav" ? "showNav" : "hideNav");
   return (
-    <Grid style={{ height: "10vh", display: "flex", alignItems: "center" }}>
+    <div className="navbarBox">
       <div className="container">
-        <Grid className="navbar">
-          <Grid>
-            <img src="./assets/logo.png" alt="LOGO" />
-          </Grid>
-          <ul>
+        <div className="navbar">
+          <div className="imgHolder">
+            <Link onClick={closeSideBar} to="/">
+              <img src="./assets/logo.png" alt="LOGO" />
+            </Link>
+          </div>
+          <ul id={navbar} className="mainList">
             <li>
-              <Link to="/">Home</Link>
+              <Link onClick={closeSideBar} to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/shop">Shop</Link>
+              <Link onClick={closeSideBar} to="/shop">
+                Shop
+              </Link>
             </li>
             <li>
               <span onClick={showList}>Pages</span>
-              <div className="pagesDetails">
-                <ul id={listState}>
+              <div id={listState} className="pagesDetails">
+                <ul>
                   <li>
-                    <Link to="/about">About Us</Link>
+                    <Link onClick={closeSideBar} to="/about">
+                      About Us
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/shop-detail">Shop Details</Link>
+                    <Link onClick={closeSideBar} to="/shop-detail">
+                      Shop Details
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/cart">Shopping Cart</Link>
+                    <Link onClick={closeSideBar} to="/cart">
+                      Shopping Cart
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/check-out">Check Out</Link>
+                    <Link onClick={closeSideBar} to="/check-out">
+                      Check Out
+                    </Link>
                   </li>
                   <li>
-                    <Link to="/blog">Blog Details</Link>
+                    <Link onClick={closeSideBar} to="/blog">
+                      Blog Details
+                    </Link>
                   </li>
                 </ul>
               </div>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link onClick={closeSideBar} to="/blog">
+                Blog
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link onClick={closeSideBar} to="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
-          <Grid
-            className="icons"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}>
+          <div className="icons">
             <SearchIcon />
             {empty === false ? <FavoriteBorderIcon /> : <FavoriteIcon />}
             <ShoppingBagIcon />
-            <span style={{ fontWeight: 600 }}>$0.00</span>
-          </Grid>
-        </Grid>
+          </div>
+          <div onClick={navbarHandler} className="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
-    </Grid>
+    </div>
   );
 };
 
