@@ -30,6 +30,11 @@
   margin: 0 5px;
   cursor: pointer;
 }
+.icons a {
+  margin: 0 5px;
+  cursor: pointer;
+  color: #111111;
+}
 .burger {
   cursor: pointer;
   display: none;
@@ -72,6 +77,33 @@
   opacity: 1;
   visibility: visible;
 }
+.searchBtn {
+  padding: 8px 30px;
+  font-weight: 800;
+  background-color: #e53637;
+  color: #111111;
+  border: none;
+  cursor: pointer;
+}
+.searchBtn:hover {
+  background-color: #e53636cb;
+}
+.searchInput {
+  padding: 10px;
+  width: 80%;
+  margin: 15px 0px;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 3px;
+  outline: none;
+}
+.searchInput:focus {
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid transparent;
+}
 
 @media (max-width: 767px) {
   .burger {
@@ -89,6 +121,9 @@
     width: 100%;
     height: 84vh;
     background-color: #111111ad;
+  }
+  .favBox {
+    color: #fff;
   }
   .navbar .mainList li a,
   .navbar .mainList span {
