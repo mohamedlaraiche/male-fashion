@@ -32,7 +32,21 @@ const Sliders = () => {
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper2">
-        <SwiperSlide>
+        <SwiperSlide className="sliderHero">
+          <div className="socialMediaRight">
+            <a href="https://www.facebook.com/">
+              <FacebookIcon />
+            </a>
+            <a href="https://www.twitter.com/">
+              <TwitterIcon />
+            </a>
+            <a href="https://www.pinterest.com/">
+              <PinterestIcon />
+            </a>
+            <a href="https://www.instagram.com/">
+              <InstagramIcon />
+            </a>
+          </div>
           <div className="slidePart">
             <Link className="summerLink" to="/summer">
               Summer Collection
@@ -45,6 +59,20 @@ const Sliders = () => {
             <Link className="shopBtn" to="/shop">
               SHOP NOW <ArrowRightAltIcon />
             </Link>
+            <div className="socialMedia">
+              <a href="https://www.facebook.com/">
+                <FacebookIcon />
+              </a>
+              <a href="https://www.twitter.com/">
+                <TwitterIcon />
+              </a>
+              <a href="https://www.pinterest.com/">
+                <PinterestIcon />
+              </a>
+              <a href="https://www.instagram.com/">
+                <InstagramIcon />
+              </a>
+            </div>
           </div>
           <img
             className="heroImgs"
@@ -53,7 +81,21 @@ const Sliders = () => {
           />
         </SwiperSlide>
 
-        <SwiperSlide>
+        <SwiperSlide className="sliderHero">
+          <div className="socialMediaRight">
+            <a href="https://www.facebook.com/">
+              <FacebookIcon />
+            </a>
+            <a href="https://www.twitter.com/">
+              <TwitterIcon />
+            </a>
+            <a href="https://www.pinterest.com/">
+              <PinterestIcon />
+            </a>
+            <a href="https://www.instagram.com/">
+              <InstagramIcon />
+            </a>
+          </div>
           <div className="slidePart">
             <Link className="summerLink" to="/summer">
               Summer Collection
