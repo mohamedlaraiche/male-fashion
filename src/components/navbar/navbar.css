@@ -70,11 +70,13 @@
 #hidePages {
   visibility: hidden;
   transition: visibility 1s, opacity 1s linear;
+  z-index: 999999999;
   opacity: 0;
 }
 #showPages {
   transition: visibility 1s, opacity 1s linear;
   opacity: 1;
+  z-index: 999999999;
   visibility: visible;
 }
 .searchBtn {
@@ -132,9 +134,11 @@
   #hideNav {
     transform: translateY(-200%);
     transition: 0.7s;
+    z-index: 999999999;
   }
   #showNav {
     transform: translateY(0%);
     transition: 0.7s;
+    z-index: 999999999;
   }
 }

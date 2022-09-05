@@ -1,0 +1,45 @@
+.heroImgs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slidePart {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.slidePart .summerLink {
+  color: #e53637;
+  font-size: 26px;
+  font-weight: 800;
+}
+.slidePart h1 {
+  font-size: 35px;
+  margin: 10px 0px;
+}
+.slidePart p {
+  width: 60%;
+  padding: 5% 0%;
+  font-weight: 600;
+}
+.slidePart .shopBtn {
+  background-color: #111111;
+  padding: 10px 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+.socialMedia {
+  margin: 50px;
+}
+.socialMedia a {
+  color: #111111;
+  margin: 15px;
+}
+.socialMedia a:hover {
+  color: #e53637;
+}

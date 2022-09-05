@@ -1,85 +1,95 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-// web.cjs is required for IE11 support
-import { useSpring, animated } from "react-spring/web.cjs";
-
-const Fade = React.forwardRef(function Fade(props, ref) {
-  const { in: open, children, onEnter, onExited, ...other } = props;
-  const style = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: open ? 1 : 0 },
-    onStart: () => {
-      if (open && onEnter) {
-        onEnter();
-      }
-    },
-    onRest: () => {
-      if (!open && onExited) {
-        onExited();
-      }
-    },
-  });
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import "./sliders.css";
+import { FreeMode, Navigation, Thumbs } from "swiper";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import PinterestIcon from "@mui/icons-material/Pinterest";
+import InstagramIcon from "@mui/icons-material/Instagram";
+const Sliders = () => {
+  const [thumbsSwiper] = useState(null);
 
   return (
-    <animated.div ref={ref} style={style} {...other}>
-      {children}
-    </animated.div>
-  );
-});
+    <>
+      <Swiper
+        style={{
+          "--swiper-navigation-color": "#222",
+          "--swiper-pagination-color": "#222",
+          "--swiper-pagination-bgcolor": "#222",
+          "--swiper-navigation-background": "#222",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        loop={true}
+        spaceBetween={10}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className="mySwiper2">
+        <SwiperSlide>
+          <div className="slidePart">
+            <Link className="summerLink" to="/summer">
+              Summer Collection
+            </Link>
+            <h2> Fall - Winter Collections 2030 </h2>
+            <p>
+              A specialist label creating luxury essentials. Ethically crafted
+              with an unwavering commitment to exceptional quality.
+            </p>
+            <Link className="shopBtn" to="/shop">
+              SHOP NOW <ArrowRightAltIcon />
+            </Link>
+          </div>
+          <img
+            className="heroImgs"
+            src="./assets/hero/hero-1.jpg"
+            alt="hero-1"
+          />
+        </SwiperSlide>
 
-Fade.propTypes = {
-  children: PropTypes.element,
-  in: PropTypes.bool.isRequired,
-  onEnter: PropTypes.func,
-  onExited: PropTypes.func,
+        <SwiperSlide>
+          <div className="slidePart">
+            <Link className="summerLink" to="/summer">
+              Summer Collection
+            </Link>
+            <h2> Fall - Winter Collections 2030 </h2>
+            <p>
+              A specialist label creating luxury essentials. Ethically crafted
+              with an unwavering commitment to exceptional quality.
+            </p>
+            <Link className="shopBtn" to="/shop">
+              SHOP NOW <ArrowRightAltIcon />
+            </Link>
+            <div className="socialMedia">
+              <a href="https://www.facebook.com/">
+                <FacebookIcon />
+              </a>
+              <a href="https://www.twitter.com/">
+                <TwitterIcon />
+              </a>
+              <a href="https://www.pinterest.com/">
+                <PinterestIcon />
+              </a>
+              <a href="https://www.instagram.com/">
+                <InstagramIcon />
+              </a>
+            </div>
+          </div>
+          <img
+            className="heroImgs"
+            src="./assets/hero/hero-2.jpg"
+            alt="hero-2"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </>
+  );
 };
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
-export default function SpringModal() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
-
-  return (
-    <div>
-      <Button onClick={handleOpen}>Open modal</Button>
-      <Modal
-        aria-labelledby="spring-modal-title"
-        aria-describedby="spring-modal-description"
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}>
-        <Fade in={open}>
-          <Box sx={style}>
-            <Typography id="spring-modal-title" variant="h6" component="h2">
-              Text in a modal
-            </Typography>
-            <Typography id="spring-modal-description" sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
-          </Box>
-        </Fade>
-      </Modal>
-    </div>
-  );
-}
+export default Sliders;
