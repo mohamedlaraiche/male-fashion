@@ -62,8 +62,10 @@ const Navbar = () => {
     setNavbar("hideNav");
   };
   const CloseFavorite = () => setFavoriteModal(false);
-  const showList = () =>
+  const showList = () => {
     setListState(listState === "hidePages" ? "showPages" : "hidePages");
+    setNavbar("hideNav");
+  };
   const closeSideBar = () => {
     setListState("hidePages");
     setNavbar("hideNav");
