@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./tendances.css";
 
 import TendancesRoutes from "../../../routes/TendancesRoutes";
-const Tendances = ({ HotData, NewData, BestData, empty }) => {
+const Tendances = ({ HotData, NewData, BestData, empty, isLoading }) => {
   return (
     <div className="tHolder">
       <div className="links">
@@ -17,6 +17,7 @@ const Tendances = ({ HotData, NewData, BestData, empty }) => {
           BestData={BestData}
           NewData={NewData}
           HotData={HotData}
+          isLoading={isLoading}
         />
       </div>
     </div>

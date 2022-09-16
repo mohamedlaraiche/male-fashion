@@ -8,7 +8,7 @@ import Contact from "../components/contact/Contact";
 import Home from "../components/home/Home";
 import ShopDetail from "../components/shop-detail/Shop-detail";
 import Shop from "../components/shop/Shop";
-const Principal = ({ HotData, NewData, BestData, empty }) => {
+const Principal = ({ HotData, NewData, BestData, empty, isLoading }) => {
   return (
     <Routes>
       <Route
@@ -16,6 +16,7 @@ const Principal = ({ HotData, NewData, BestData, empty }) => {
         path="*"
         element={
           <Home
+            isLoading={isLoading}
             empty={empty}
             BestData={BestData}
             NewData={NewData}
