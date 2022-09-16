@@ -8,13 +8,20 @@ import Contact from "../components/contact/Contact";
 import Home from "../components/home/Home";
 import ShopDetail from "../components/shop-detail/Shop-detail";
 import Shop from "../components/shop/Shop";
-const Principal = ({ productsData, empty }) => {
+const Principal = ({ HotData, NewData, BestData, empty }) => {
   return (
     <Routes>
       <Route
         exact
         path="*"
-        element={<Home empty={empty} productsData={productsData} />}
+        element={
+          <Home
+            empty={empty}
+            BestData={BestData}
+            NewData={NewData}
+            HotData={HotData}
+          />
+        }
       />
       <Route path="/shop" element={<Shop />} />
       <Route path="/about" element={<About />} />

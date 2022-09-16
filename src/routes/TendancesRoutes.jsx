@@ -4,20 +4,17 @@ import Best from "../components/home/tendances/Best";
 import New from "../components/home/tendances/New";
 import Hot from "../components/home/tendances/Hot";
 
-const TendancesRoutes = ({ productsData, empty }) => {
+const TendancesRoutes = ({ HotData, BestData, empty, NewData }) => {
   return (
     <Routes>
       <Route
         path="/best-sellers"
-        element={<Best empty={empty} productsData={productsData} />}
+        element={<Best empty={empty} BestData={BestData} />}
       />
-      <Route
-        path="/new-arrivals"
-        element={<New empty={empty} productsData={productsData} />}
-      />
+      <Route path="/" element={<New empty={empty} NewData={NewData} />} />
       <Route
         path="/hot-saless"
-        element={<Hot empty={empty} productsData={productsData} />}
+        element={<Hot empty={empty} HotData={HotData} />}
       />
     </Routes>
   );

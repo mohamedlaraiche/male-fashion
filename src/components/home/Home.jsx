@@ -3,12 +3,12 @@ import Banners from "./banners/Banners";
 import Sliders from "./sliders/Sliders";
 import Tendances from "./tendances/Tendances";
 
-const Home = ({ productsData, empty }) => {
+const Home = ({ HotData,NewData, BestData, empty }) => {
   return (
     <div>
       <Sliders />
       <Banners />
-      <Tendances empty={empty} productsData={productsData} />
+      <Tendances empty={empty} BestData={BestData} NewData={NewData} HotData={HotData} />
     </div>
   );
 };

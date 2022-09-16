@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 2,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 3,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 4,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 5,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 6,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 7,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 8,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  },
+  {
+    "id": 9,
+    "img": "./assets/product/product-5.jpg",
+    "name": "T-SHIRT",
+    "price": "$82.66"
+  }
+]
