@@ -1,0 +1,47 @@
+.tHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+}
+
+.t-products .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+.ProductCard {
+  padding: 20px;
+  margin: 20px;
+  background-color: #f4f4f4;
+}
+.ProductCard img {
+  cursor: pointer;
+  margin: 10px;
+}
+.ProductCard img:hover {
+  transform: scale(1.1);
+}
+.btns {
+  display: flex;
+  align-items: center;
+  color: #e53637;
+  cursor: pointer;
+}
+.btns svg {
+  margin: 0px 15px;
+}
+.ProductCard p {
+  font-weight: bolder;
+  color: rgb(29, 239, 29);
+  margin: 5px;
+}

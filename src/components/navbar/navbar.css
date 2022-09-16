@@ -1,0 +1,144 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+}
+.navbar ul li a,
+.navbar ul li span {
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+}
+.navbar ul li a:hover,
+.navbar ul li span:hover {
+  color: #e53637;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icons svg {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.icons a {
+  margin: 0 5px;
+  cursor: pointer;
+  color: #111111;
+}
+.burger {
+  cursor: pointer;
+  display: none;
+}
+.burger div {
+  width: 30px;
+  margin: 3px;
+  padding: 2.5px;
+  height: 3px;
+  background-color: #111111;
+  border-radius: 25px;
+}
+.pagesDetails {
+  position: absolute;
+  background-color: #111111;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  right: 0;
+}
+.pagesDetails ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40px;
+  height: 100vh;
+}
+.pagesDetails ul li a {
+  color: #fff;
+}
+#hidePages {
+  visibility: hidden;
+  transition: visibility 1s, opacity 1s linear;
+  z-index: 999999999;
+  opacity: 0;
+}
+#showPages {
+  transition: visibility 1s, opacity 1s linear;
+  opacity: 1;
+  z-index: 999999999;
+  visibility: visible;
+}
+.searchBtn {
+  padding: 8px 30px;
+  font-weight: 800;
+  background-color: #e53637;
+  color: #111111;
+  border: none;
+  cursor: pointer;
+}
+.searchBtn:hover {
+  background-color: #e53636cb;
+}
+.searchInput {
+  padding: 10px;
+  width: 80%;
+  margin: 15px 0px;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #333;
+  border-radius: 3px;
+  outline: none;
+}
+.searchInput:focus {
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid transparent;
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: block;
+  }
+  .navbar .mainList {
+    position: absolute;
+    top: 16vh;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 84vh;
+    background-color: #111111e3;
+  }
+  .favBox {
+    color: #fff;
+  }
+  .navbar .mainList li a,
+  .navbar .mainList span {
+    color: #fff;
+  }
+  #hideNav {
+    transform: translateY(-200%);
+    transition: 0.7s;
+    z-index: 999999999;
+  }
+  #showNav {
+    transform: translateY(0%);
+    transition: 0.7s;
+    z-index: 999999999;
+  }
+}
