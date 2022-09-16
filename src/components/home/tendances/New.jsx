@@ -70,7 +70,16 @@ const Best = ({ NewData, empty, isLoading }) => {
                       X
                     </button>
                   </div>
-                  <img sx={{ mt: 2 }} src={product.img} alt="" width="400px" />
+                  <img
+                    sx={{ mt: 2 }}
+                    src={product.img}
+                    alt="Product"
+                    style={{
+                      maxWidth: "400px",
+                      width: "100%",
+                      height: "auto",
+                    }}
+                  />
                 </Box>
               </Modal>
             </>

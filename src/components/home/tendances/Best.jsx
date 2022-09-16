@@ -79,8 +79,12 @@ const Best = ({ BestData, empty, isLoading }) => {
                     <img
                       sx={{ mt: 2 }}
                       src={product.img}
-                      alt=""
-                      width="400px"
+                      alt="Product"
+                      style={{
+                        maxWidth: "400px",
+                        width: "100%",
+                        height: "auto",
+                      }}
                     />
                   </Box>
                 </Modal>
