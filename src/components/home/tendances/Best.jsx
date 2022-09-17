@@ -34,8 +34,8 @@ const Best = ({ BestData, empty, isLoading }) => {
             <p> Loading ... </p>
           ) : (
             BestData.map((product) => (
-              <>
-                <div className="ProductCard" key={product.id}>
+              <div>
+                <div key={product.id} className="ProductCard">
                   <img src={product.img} alt="" onClick={handleOpen} />
                   <h4> {product.name} </h4>
                   <p> {product.price} </p>
@@ -88,7 +88,7 @@ const Best = ({ BestData, empty, isLoading }) => {
                     />
                   </Box>
                 </Modal>
-              </>
+              </div>
             ))
           )}
         </div>

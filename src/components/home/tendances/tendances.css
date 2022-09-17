@@ -63,6 +63,33 @@
 }
 
 .soldCart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #f3f2ee;
   height: 60vh;
+}
+.prd img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+.prdDetails {
+  margin-left: 15px;
+}
+.prdDetails h5 {
+  color: #e53637;
+  font-weight: 888;
+  margin-bottom: 20px;
+}
+.prdDetails h3 {
+  font-weight: bolder;
+  margin: 20px 0px;
+}
+.prdDetails a {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
